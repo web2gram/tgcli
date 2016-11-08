@@ -29,7 +29,7 @@ def start(bot, update):
   bot.sendMessage(update.message.chat_id, text='Hello World! The chat_id for this is %d' % update.message.chat_id)
 
 def hello(bot, update):
-  print update
+  print(update)
   bot.sendMessage(update.message.chat_id,
                   text='Hello {}'.format(update.message.from_user.first_name))
 
