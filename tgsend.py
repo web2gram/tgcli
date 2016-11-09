@@ -37,7 +37,7 @@ if args.webhook is not None:
     if args.webhook == 'info':
         print(updater.bot.get_webhook_info())
     else:
-        updater.bot.setWebhook(webhook)
+        updater.bot.setWebhook(args.webhook)
 
     updater.stop()
     sys.exit()
