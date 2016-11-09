@@ -5,10 +5,17 @@ from telegram.ext import Updater, CommandHandler
 import argparse
 
 """
+Requirements:-
+
+Install python-telegram-bot package:-
+
+python3 -mvenv . # create virtualenv in current directory
+./bin/pip install python-telegram-bot
+
 Usage:-
 
-python tgsend.py <TOKEN> --send="test direct cli group" --chat_id=-<chat_id>
-python tgsend.py <TOKEN> # listen for message
+./bin/python tgsend.py <TOKEN> --send="test direct cli group" --chat_id=-<chat_id>
+./bin/python tgsend.py <TOKEN> # listen for message
 """
 
 parser = argparse.ArgumentParser(description='Run TG Bot')
