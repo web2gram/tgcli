@@ -1,3 +1,7 @@
+## Send markdown message to channel
+
+    ../bin/python tgcli.py <BOT_TOKEN> --send test.md --chat_id @channel_name
+
 ## Bot request
 This is how telegram send the request:-
 
