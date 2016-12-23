@@ -1,0 +1,10 @@
+*.pyc
+*.db
+*.dump
+bin/
+eggs/
+develop-eggs/
+parts/
+external-src
+.installed.cfg
+.mr.developer.cfg
