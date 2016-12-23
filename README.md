@@ -1,6 +1,15 @@
+## Quickstart
+
+    git clone https://github.com/web2gram/tgcli.git
+    cd tgcli
+    python bootstrap.py
+    ./bin/buildout
+
+A python interpreter is ready in `./bin/python`.
+
 ## Send markdown message to channel
 
-    ../bin/python tgcli.py <BOT_TOKEN> --send test.md --chat_id @channel_name
+    ./bin/python tgcli.py <BOT_TOKEN> --send test.md --chat_id @channel_name
 
 ## Bot request
 This is how telegram send the request:-
