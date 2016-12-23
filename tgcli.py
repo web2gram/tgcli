@@ -1,7 +1,9 @@
+import os
 import sys
 
 from telegram.ext import Updater, CommandHandler
 
+import telegram
 import argparse
 
 """
@@ -41,7 +43,15 @@ def main():
     updater = Updater(args.token)
 
     if args.message is not None:
-        updater.bot.sendMessage(args.chat_id, text=args.message)
+        if os.path.isfile(args.message):
+            text = open(args.message).read()
+        else:
+            text = args.message
+
+        # not all markdown supported
+        # https://core.telegram.org/bots/api#formatting-options
+        updater.bot.sendMessage(args.chat_id, text=text,
+                                parse_mode=telegram.ParseMode.MARKDOWN)
         updater.stop()
         sys.exit()
 
