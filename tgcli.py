@@ -29,7 +29,8 @@ def hello(bot, update):
                   text='Hello {}'.format(update.message.from_user.first_name))
 
 def chat_id(bot, update):
-    bot.sendMessage(update.message.chat_id, text='The chat_id for this is %d' % update.message.chat_id)
+    text='The chat_id for this is %d. Take note that chat_id for group is negative number' % update.message.chat_id
+    bot.sendMessage(update.message.chat_id, text)
 
 def main():
     parser = argparse.ArgumentParser(description='Run TG Bot')
