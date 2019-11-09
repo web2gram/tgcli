@@ -11,6 +11,8 @@ A python interpreter is ready in `./bin/python`.
 
     ./bin/python tgcli.py <BOT_TOKEN> --send test.md --chat_id @channel_name
 
+Standalone binary also available in Releases (compiled with nuitka on Ubuntu 18.04). It should work on linux system with glibc>2.27.
+
 ## Bot request
 This is how telegram send the request:-
 
