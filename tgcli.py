@@ -34,8 +34,9 @@ python3 -mvenv . # create virtualenv in current directory
 
 Usage:-
 
-./bin/python tgsend.py <TOKEN> --send="test direct cli group" --chat_id=-<chat_id>
-./bin/python tgsend.py <TOKEN> # listen for message
+export TGCLI_TOKEN=xxxx
+./bin/python tgcli.py --send="test direct cli group" --chat_id=-<chat_id>
+./bin/python tgcli.py # listen for message
 """
 
 def start(bot, update):
@@ -52,14 +53,13 @@ def chat_id(bot, update):
 
 def main():
     parser = argparse.ArgumentParser(description='Run TG Bot')
-    parser.add_argument('token', type=str)
     parser.add_argument('--send', dest='message')
     parser.add_argument('--chat_id', dest='chat_id')
     parser.add_argument('--webhook', dest='webhook')
 
     args = parser.parse_args()
 
-    updater = Updater(args.token)
+    updater = Updater(os.environ["TGCLI_TOKEN"])
 
     if args.message is not None:
         if os.path.isfile(args.message):
